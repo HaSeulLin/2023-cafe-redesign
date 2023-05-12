@@ -17,7 +17,8 @@ import myLogger from './middleware/myLogger';
 import thunk from 'redux-thunk'
 
 // createStore를 통해 store 생성 > Provider의 store 속성값
-const store = createStore(rootReducer, applyMiddleware(myLogger, thunk));
+// const store = createStore(rootReducer, applyMiddleware(myLogger, thunk));
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -27,6 +27,13 @@ export const addNumThunk = () => (next) => {
     next({type:"ADD_NUM"})
 }
 
+// Thunk를 이용한 액션 함수 작성
+// next()를 이용하여 ADD_NUM 두 번 실행하기
+export const addAddThunk = () => (next) => {
+    next({type:"ADD_NUM"})
+    next({type:"ADD_NUM"})
+}
+
 // 리듀서
 function counterThunk (state=initialState, action) {
     switch (action.type) {

@@ -4,6 +4,7 @@ import CounterNumber from './components/CounterNumber';
 import CounterThunk from './components/CounterThunk';
 import ExCounterBox from './components/ExCounterBox';
 import Memo from './components/Memo';
+import WeatherThunk from './components/WeatherThunk';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <CounterNumber />
       <Memo />
       <CounterThunk />
+      <WeatherThunk />
     </div>
   );
 }
