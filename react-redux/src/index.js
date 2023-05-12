@@ -8,13 +8,14 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 // store를 만들기 위한 createStore 추가
 // 줄 그어진 이유 : tollkit(최근업뎃)을 대신 사용 권장함
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 
 // rootReducer 가져옴
 import rootReducer from './modules';
+import myLogger from './middleware/myLogger';
 
 // createStore를 통해 store 생성 > Provider의 store 속성값
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(myLogger));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

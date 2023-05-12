@@ -3,8 +3,10 @@ import { combineReducers } from 'redux';
 
 // 작성한 리듀서 가져옴
 import counter from './counter';
+import counterNumber from './counterNumber';
+import memo from './memo';
 
 // 작성한 리듀서를 객체로 묶어서 내보냄
-const rootReducer = combineReducers( {counter} )
+const rootReducer = combineReducers( {counter, counterNumber, memo} )
 
 export default rootReducer
