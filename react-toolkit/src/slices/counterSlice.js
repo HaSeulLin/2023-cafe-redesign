@@ -15,7 +15,9 @@ export const counterSlice = createSlice({
         },
         // 감소하는 함수(메서드)작성
         decrement : (state)=>{
-            state.value -= 1;
+            // return을 이용하면 이전 방식으로 값을 저장할 수 있다.
+            // 이전 방식 : state의 값을 통째로 할당
+            return { value : state.value -= 1 }
         },
         // 값을 입력받아와서 증가하는 함수
         // action은 리덕스에서 값을 전달한 액션객체의 내용
