@@ -20,6 +20,7 @@ export const getWeather = () => async (next) => {
     next({type:"STARTLOADING"})
 
     const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Busan&appid=72041b75f24ac46049485963e6b23fc9&lang=kr');
+    // await :: 완료되어야 다음 넘어감(전체동기) >> 코드 느려짐 >> 로딩페이지 비동기로 만든다
     const data = await response.json();
     console.log(data)
     console.log(data.weather[0].description)
